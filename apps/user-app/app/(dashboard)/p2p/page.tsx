@@ -55,7 +55,7 @@ export default async function () {
       </div>
 
       <div className="pt-4">
-        <P2PTransactions transactions={transactions} />
+        <P2PTransactions transactions={transactions as { time: Date; amount: number; type: string; userId?: number | undefined; }[]} />
       </div>
 
     </div>

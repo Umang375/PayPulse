@@ -7,7 +7,7 @@ export const P2PTransactions = ({
         time: Date,
         amount: number,
         type: string,
-        userId: number
+        userId?: number | undefined
     }[]
 
 }) => {
@@ -32,9 +32,9 @@ export const P2PTransactions = ({
                 </div>
                 {t.type === "DEBIT" ?
                     <div className="flex flex-col justify-center text-red-600">
-                        - Rs {t.amount / 100}
+                        - Rs {t.amount}
                     </div> : <div className="flex flex-col justify-center text-green-600">
-                        Rs {t.amount / 100}
+                        Rs {t.amount}
                     </div>
                 }
 
